@@ -3,11 +3,12 @@ import { useEffect, useState, useRef } from "react";
 import Item from "./Item";
 import Card from "../components/Card";
 import styles from "./page.module.css";
+import { Nft } from "../types";
 
 export default function Collection() {
   const [totalCount, setTotalCount] = useState(0);
   const [ethBalance, setEthBalance] = useState(0);
-  const [nftList, setNftList] = useState<any>([]);
+  const [nftList, setNftList] = useState<Nft[]>([]);
   const [currentPage, setPage] = useState(0);
   const [address, setAddress] = useState(null);
   const inputRef = useRef<any>();
@@ -67,7 +68,7 @@ export default function Collection() {
         <div className={styles.items}>
           {nftList
             .slice(currentPage * 25, currentPage * 25 + 25)
-            .map((nft: any) => (
+            .map((nft: Nft) => (
               <Item key={nft.contractAddress + nft.tokenId} metadata={nft} />
             )) || null}
         </div>

@@ -9,7 +9,10 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+
 import styles from "../page.module.css";
+
+import { GraphProps } from "../types";
 
 ChartJS.register(
   CategoryScale,
@@ -20,12 +23,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-type GraphProps = {
-  oldestBlock: number;
-  base: number[];
-  priority: number[];
-};
 
 export default function Graph({ oldestBlock, base, priority }: GraphProps) {
   const median = priority.map((el, i) => el + base[i]);
@@ -38,16 +35,6 @@ export default function Graph({ oldestBlock, base, priority }: GraphProps) {
       title: {
         display: false,
         text: "Median Gas Prices",
-      },
-    },
-    scales: {
-      x: {
-        // ticks: {
-        //   maxTicksLimit: 10,
-        // },
-      },
-      y: {
-        // min: 0,
       },
     },
   };

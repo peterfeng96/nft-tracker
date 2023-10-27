@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { ItemProps } from "../types";
 
-export default function Item(props: any) {
-  const { contractAddress, contractName, floorPrice, name, tokenId, url } =
-    props.metadata;
+export default function Item({
+  metadata: { contractAddress, contractName, floorPrice, name, tokenId, url },
+}: ItemProps) {
   return (
     <div className={styles.item}>
       <Image src={url} alt="No Image" width={200} height={200} />
@@ -14,11 +15,10 @@ export default function Item(props: any) {
       >
         {name || `${contractName} #${tokenId}`}
       </Link>
-      <div style={{ width: "100%", margin: "1rem 0 0 0" }}>
+      <div style={{ width: "100%" }}>
         <Link
           href={`https://opensea.io/assets/ethereum/${contractAddress}`}
           target="_blank"
-          style={{ fontWeight: "900" }}
         >
           {contractName}
         </Link>

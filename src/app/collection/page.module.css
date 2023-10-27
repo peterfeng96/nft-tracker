@@ -49,7 +49,9 @@
 .item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   width: 206px;
   margin: 0.3rem;
   border: 3px solid #54317a;
