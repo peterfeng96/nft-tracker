@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import styles from './page.module.css'
+import Image from 'next/image'
+import styles from '../page.module.css'
 
 export default function NavBar() {
     return (
         <nav>
             <ul className={styles.navList}>
-                <img src={'tracker.png'} style={{width:'2.5rem', height: '2.5rem'}}></img>
+                <Image src={'/tracker.png'} width={40} height={40} alt='tracker'/>
                 <li id={styles.logo}>
                     <Link href='/'>NFT Tracker</Link>
                 </li>

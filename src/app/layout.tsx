@@ -1,31 +1,32 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter, Roboto } from 'next/font/google'
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter, Roboto } from "next/font/google";
 
-import NavBar from './NavBar'
+import NavBar from "./components/NavBar";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-})
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'NFT Tracker',
-  description: 'Next level NFT tracker',
-}
+  title: "NFT Tracker",
+  description: "Next level NFT tracker",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <NavBar/>
-        {children}</body>
+        <NavBar />
+        {children}
+      </body>
     </html>
-  )
+  );
 }

@@ -1,11 +1,3 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4rem;
-  min-height: 100vh;
-}
-
 .navList {
   display: flex;
   flex-direction: row;
@@ -21,14 +13,18 @@
   color: white;
 }
 
-ul.navList > li {
+.navList > li {
   list-style-type: none;
   margin: 1rem;
 }
 
-ul.navList > li:hover {
-    color: rgb(230, 230, 230);
-  }
+.navList > li:hover {
+  color: rgb(230, 230, 230);
+}
+
+.home {
+  width: 100%;
+}
 
 .ethContainer {
   width: 100%;
@@ -43,11 +39,19 @@ ul.navList > li:hover {
   margin: 0 0 1rem 0;
 }
 
-.gasContainer {
+.cardContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
   width: 100%;
-  margin: 2rem 0 0 0;
-  font-size: 2rem;
+  margin: 2rem 0;
+}
+.card {
+  flex: 1;
+  border: 1px solid red;
+  padding: 1rem;
+}
+
+.graph {
+  margin: 2rem 0;
 }
