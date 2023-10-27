@@ -1,6 +1,6 @@
-import styles from "../page.module.css";
+import styles from "../app/page.module.css";
 
-import { CardProps } from "../types";
+import { CardProps } from "../app/types";
 
 export default function Card({ title, keys, values }: CardProps) {
   const info = keys.map((el, i) => (

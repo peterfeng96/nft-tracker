@@ -1,7 +1,7 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import Item from "./Item";
-import Card from "../components/Card";
+import Card from "@/components/Card";
 import styles from "./page.module.css";
 import { Nft } from "../types";
 

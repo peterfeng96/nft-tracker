@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { ItemProps } from "../types";
@@ -8,7 +7,7 @@ export default function Item({
 }: ItemProps) {
   return (
     <div className={styles.item}>
-      <Image src={url} alt="No Image" width={200} height={200} />
+      <img src={url} alt="No Image" width={200} height={200} />
       <Link
         href={`https://opensea.io/assets/ethereum/${contractAddress}/${tokenId}`}
         target="_blank"

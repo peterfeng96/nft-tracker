@@ -5,8 +5,8 @@ import styles from "./page.module.css";
 
 import { getEthPrice, getEthGas } from "@/utils/gas";
 
-import Card from "./components/Card";
-import Graph from "./components/Graph";
+import Card from "@/components/Card";
+import Graph from "@/components/Graph";
 
 export default function Home() {
   const [ethPrice, setEthPrice] = useState<number>(0);

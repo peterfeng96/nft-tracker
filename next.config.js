@@ -8,7 +8,8 @@ const nextConfig = {
             'ipfs.io'
         ]
     },
-    // output: 'export',
+    trailingSlash: true,
+    output: 'export',
 }
 
 module.exports = nextConfig

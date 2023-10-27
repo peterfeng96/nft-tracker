@@ -10,9 +10,9 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
-import styles from "../page.module.css";
+import styles from "../app/page.module.css";
 
-import { GraphProps } from "../types";
+import { GraphProps } from "../app/types";
 
 ChartJS.register(
   CategoryScale,
